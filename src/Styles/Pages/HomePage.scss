@@ -1,0 +1,59 @@
+$tdWidth: 100px;
+
+.homePage {
+  margin: 5px;
+
+  table {
+    border: 1px solid grey;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    tr {
+      background-color: rgb(247, 247, 247);
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+
+      th {
+        background-color: #397420;
+
+        min-width: $tdWidth;
+      }
+
+      td {
+        border: 1px solid grey;
+        min-width: $tdWidth;
+      }
+    }
+  }
+
+  .percentageTable {
+    border: 1px solid grey;
+    margin-bottom: 10px;
+
+    tr {
+      th {
+        background-color: #397420;
+        min-width: $tdWidth;
+      }
+
+      td {
+        border: 1px solid grey;
+        min-width: $tdWidth;
+      }
+    }
+
+    tr:nth-child(odd) {
+      background-color: rgb(247, 247, 247);
+    }
+    tr:nth-child(even) {
+      background-color: rgb(220, 220, 220);
+    }
+  }
+
+  .explain {
+    p {
+      max-width: 400px;
+    }
+  }
+}
