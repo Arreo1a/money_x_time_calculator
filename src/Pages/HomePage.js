@@ -90,111 +90,117 @@ function HomePage() {
 
   return (
     <div className="homePage">
-      <h2>Money x Time Calculator</h2>
+      <div className="navbar">
+        <div className="myName">That Dude Martin's</div>
+        <div className="title">Money x Time Calculator</div>
+      </div>
 
       <div className="topSection">
-        <div>
-          Amount per hour{" "}
+        <div className="inputContainer">
+          <div className="inputTitle">Amount per hour</div>
           <input
             id="amountInput"
             type="number"
-            placeholder="Amount per hour"
             onChange={handlePerHourChange}
           />
         </div>
-        <div>
-          Hours per day{" "}
+        <div className="inputContainer">
+          <div className="inputTitle">Hours per day</div>
           <input
             id="amountInput"
             type="number"
-            placeholder="Hours per day"
             onChange={handleHoursPerDayChange}
           />
         </div>
-        <div>
-          Work days per week{" "}
+        <div className="inputContainer">
+          <div className="inputTitle">Work days per week</div>
           <input
             id="amountInput"
             type="number"
-            placeholder="Work days per week"
             onChange={handleAmountOfDaysChange}
           />
         </div>
 
-        <div>
-          Custom Percentage
+        <div className="inputContainer">
+          <div className="inputTitle">Custom Percentage</div>
           <input
             id="amountInput"
             type="number"
-            placeholder="Add Custom Percentage"
             onChange={handleCustomPercentage}
           />
         </div>
       </div>
 
-      <table>
-        <tr>
-          <th>Hour</th>
-          <th>Day</th>
-          <th>Week</th>
-          <th>Month</th>
-          <th>2 Months</th>
-          <th>4 Months</th>
-          <th>6 Months</th>
-          <th>8 Months</th>
-          <th>10 Months</th>
-          <th>12 Months</th>
-          <th>Year</th>
-        </tr>
-        {RenderYearAmount(100)}
-      </table>
+      <div className="tableContainer">
+        <table>
+          <tr>
+            <th>Hour</th>
+            <th>Day</th>
+            <th>Week</th>
+            <th>Month</th>
+            <th>2 Months</th>
+            <th>4 Months</th>
+            <th>6 Months</th>
+            <th>8 Months</th>
+            <th>10 Months</th>
+            <th>12 Months</th>
+            <th>Year</th>
+          </tr>
+          {RenderYearAmount(100)}
+        </table>
+      </div>
 
-      <table>
-        <caption>Custom Percentage</caption>
+      <div className="tableContainer">
+        <div>Custom Percentage</div>
 
-        <tr>
-          <th>Percentage</th>
-          <th>Hour</th>
-          <th>Day</th>
-          <th>Week</th>
-          <th>Month</th>
-          <th>2 Months</th>
-          <th>4 Months</th>
-          <th>6 Months</th>
-          <th>8 Months</th>
-          <th>10 Months</th>
-          <th>12 Months</th>
-          <th>Year</th>
-        </tr>
-        {RenderPercentageAmount(customPercentage)}
-      </table>
+        <table>
+          <tr>
+            <th>Percentage</th>
+            <th>Hour</th>
+            <th>Day</th>
+            <th>Week</th>
+            <th>Month</th>
+            <th>2 Months</th>
+            <th>4 Months</th>
+            <th>6 Months</th>
+            <th>8 Months</th>
+            <th>10 Months</th>
+            <th>12 Months</th>
+            <th>Year</th>
+          </tr>
+          {RenderPercentageAmount(customPercentage)}
+        </table>
+      </div>
 
-      <table className="percentageTable">
-        <caption>Percentages</caption>
-        <tr>
-          <th>Percentage</th>
-          <th>Hour</th>
-          <th>Day</th>
-          <th>Week</th>
-          <th>Month</th>
-          <th>2 Months</th>
-          <th>4 Months</th>
-          <th>6 Months</th>
-          <th>8 Months</th>
-          <th>10 Months</th>
-          <th>12 Months</th>
-          <th>Year</th>
-        </tr>
-        {RenderPercentageAmount(100)}
-        {RenderPercentageAmount(50)}
-        {RenderPercentageAmount(40)}
-        {RenderPercentageAmount(30)}
-        {RenderPercentageAmount(20)}
-        {RenderPercentageAmount(15)}
-        {RenderPercentageAmount(10)}
-        {RenderPercentageAmount(5)}
-        {RenderPercentageAmount(1)}
-      </table>
+      <div className="tableContainer">
+        <div>Percentages</div>
+
+        <table className="percentageTable">
+          <tr>
+            <th>Percentage</th>
+            <th>Hour</th>
+            <th>Day</th>
+            <th>Week</th>
+            <th>Month</th>
+            <th>2 Months</th>
+            <th>4 Months</th>
+            <th>6 Months</th>
+            <th>8 Months</th>
+            <th>10 Months</th>
+            <th>12 Months</th>
+            <th>Year</th>
+          </tr>
+          {RenderPercentageAmount(100)}
+          {RenderPercentageAmount(50)}
+          {RenderPercentageAmount(40)}
+          {RenderPercentageAmount(30)}
+          {RenderPercentageAmount(20)}
+          {RenderPercentageAmount(15)}
+          {RenderPercentageAmount(10)}
+          {RenderPercentageAmount(5)}
+          {RenderPercentageAmount(1)}
+        </table>
+      </div>
 
       <div className="explain">
         <h4>Why I put 12 months and Year instead of just Year</h4>

@@ -1,28 +1,97 @@
 $tdWidth: 100px;
 
 .homePage {
-  margin: 5px;
+  overflow: hidden;
 
-  table {
-    border: 1px solid grey;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    tr {
-      background-color: rgb(247, 247, 247);
-      overflow-x: auto;
-      overflow-y: hidden;
-      -webkit-overflow-scrolling: touch;
+    background-color: #397420;
+    color: white;
 
-      th {
-        background-color: #397420;
+    height: 60px;
+    width: 100%;
 
-        min-width: $tdWidth;
+    .myName {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .title {
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+
+  .topSection {
+    margin: 0px 7px;
+    margin-top: 20px;
+
+    .inputContainer {
+      position: relative;
+
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+
+      margin-bottom: 15px;
+
+      .inputTitle {
+        position: absolute;
+        top: -14px;
+        left: 5px;
+
+        padding: 0px 5px;
+
+        background-color: rgb(255, 255, 255);
       }
 
-      td {
-        border: 1px solid grey;
-        min-width: $tdWidth;
+      input {
+        background-color: white;
+        border: 1px solid lightgray;
+
+        padding: 6px 10px;
+        border-radius: 5px;
+
+        font-size: 16px;
+      }
+    }
+  }
+
+  .tableContainer {
+    overflow-x: scroll;
+    white-space: nowrap;
+
+    table {
+      border: 1px solid grey;
+      border-collapse: collapse;
+      margin-top: 10px;
+      margin-bottom: 10px;
+
+      tr {
+        background-color: rgb(247, 247, 247);
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+
+        th {
+          background-color: #397420;
+          color: white;
+          font-weight: 400;
+
+          min-width: $tdWidth;
+
+          padding: 4px 0px;
+        }
+
+        td {
+          border: 1px solid grey;
+          min-width: $tdWidth;
+          padding: 2px 5px;
+        }
       }
     }
   }
@@ -52,6 +121,8 @@ $tdWidth: 100px;
   }
 
   .explain {
+    margin: 10px;
+
     p {
       max-width: 400px;
     }
