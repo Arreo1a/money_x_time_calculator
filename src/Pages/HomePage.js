@@ -122,7 +122,7 @@ function HomePage() {
         </div>
 
         <div className="inputContainer">
-          <div className="inputTitle">Custom Percentage</div>
+          <div className="inputTitle">Custom percentage</div>
           <input
             id="amountInput"
             type="number"
@@ -151,7 +151,7 @@ function HomePage() {
       </div>
 
       <div className="tableContainer">
-        <div>Custom Percentage</div>
+        <div>Custom percentage</div>
 
         <table>
           <tr>
